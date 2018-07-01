@@ -1,0 +1,29 @@
+exportPattern("^[[:alpha:]]+")
+
+export("Agg.t", "GoF", "IsReg.ts", "PlotEval", "PlotMC.event")
+
+exportMethods("MC.setup", "MC.calibra", "Validation_Quantity")
+
+exportClasses(setup)
+exportClasses(inputObs)
+
+import(methods)
+import(stats)
+import(graphics)
+import(grDevices)
+import(utils)
+import(mAr)
+import(lmom)
+
+importFrom(parallel, detectCores, stopCluster, makeCluster, makePSOCKcluster)
+importFrom(doParallel, registerDoParallel)
+importFrom(foreach, foreach, "%dopar%", "%do%")
+importFrom(lattice, xyplot, panel.polygon, panel.superpose, panel.xyplot)
+importFrom(msm, rtnorm)
+importFrom(ggplot2, ggplot, aes, geom_line, geom_ribbon, theme, theme_bw, element_text) 
+importFrom(moments, skewness)
+importFrom(hydroGOF, gof)
+importFrom(zoo, plot.zoo, is.regular)
+importFrom(data.table, data.table, setkey, .SD)
+importFrom(xts, as.xts)
+importFrom(EmiStatR, EmiStatR, input)
