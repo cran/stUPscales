@@ -16,8 +16,8 @@ The DESCRIPTION file:
 \tabular{ll}{
 Package: \tab stUPscales  \cr
 Type:    \tab Package   \cr
-Version: \tab 1.0.3.1       \cr
-Date:    \tab 2018-06-18\cr
+Version: \tab 1.0.3.2       \cr
+Date:    \tab 2018-07-04\cr
 License: \tab GPL (>= 3)\cr
 Depends: \tab R (>= 2.10), methods, stats, graphics, grDevices, utils, mAr, lmom \cr
 Imports: \tab parallel, doParallel, foreach, lattice, msm, ggplot2, moments, hydroGOF, zoo, data.table, xts, EmiStatR \cr
@@ -26,9 +26,7 @@ Imports: \tab parallel, doParallel, foreach, lattice, msm, ggplot2, moments, hyd
 \author{
     J.A. Torres-Matallana [aut, cre];
     U. Leopold [ctb];
-    G.B.M. Heuvelink [ctb];
-    K. Klepiszewski [ctb]; 
-    G. Schutz [ctb].
+    G.B.M. Heuvelink [ctb].
 
 Maintainer: J.A. Torres-Matallana.
 }
