@@ -1,0 +1,8 @@
+Germany_precipitation_201112
+Germany_stations
+HS_RW20111216_stfdf
+HS_RY20111216_stfdf
+Lux_boundary: boundary.Lux
+Lux_precipitation: event.subset.xts
+Lux_precipitation_2010_2011
+Lux_stations: stations
