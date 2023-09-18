@@ -59,7 +59,7 @@ MC.analysis <- function(x, delta, qUpper, p1.det, sim.det,
     data.VChamber <- t(as.data.frame(sim1[,"mcVChamber"]))
     summ.VChamber <- MC.summary(p1, data.VChamber)
     summ <- list(summ.VChamber = summ.VChamber)
-    save(summ, file="summ.RData")
+    # save(summ, file="summ.RData") # uncomment to save file
     summ.VChamber
   },{
     summ.VChamber <- summ[["summ.VChamber"]]
@@ -84,7 +84,7 @@ MC.analysis <- function(x, delta, qUpper, p1.det, sim.det,
     data.Vol <- t(as.data.frame(sim1[,"mcVsv"]))
     summ.Vol <- MC.summary(p1, data.Vol)
     summ <- append(summ, list(summ.Vol = summ.Vol))
-    save(summ, file="summ.RData")
+    # save(summ, file="summ.RData") # uncomment to save file
     summ.Vol
   }
   
@@ -111,7 +111,7 @@ MC.analysis <- function(x, delta, qUpper, p1.det, sim.det,
     data.BCOD <- t(as.data.frame(sim1[,"mcBCODsv"]))
     summ.BCOD <- MC.summary(p1, data.BCOD)
     summ <- append(summ, list(summ.BCOD=summ.BCOD))
-    save(summ, file="summ.RData")
+    # save(summ, file="summ.RData") # uncomment to save file
     summ.BCOD
   }
   
@@ -128,7 +128,7 @@ MC.analysis <- function(x, delta, qUpper, p1.det, sim.det,
     data.CCOD <- t(as.data.frame(sim1[,"mcCCODsv"]))
     summ.CCOD <- MC.summary(p1, data.CCOD)
     summ <- append(summ, list(summ.CCOD=summ.CCOD))
-    save(summ, file="summ.RData")
+    # save(summ, file="summ.RData") # uncomment to save file
     summ.CCOD
   }
   
@@ -154,7 +154,7 @@ MC.analysis <- function(x, delta, qUpper, p1.det, sim.det,
     data.BNH4 <- t(as.data.frame(sim1[,"mcBNH4sv"]))
     summ.BNH4 <- MC.summary(p1, data.BNH4)
     summ <- append(summ, list(summ.BNH4=summ.BNH4))
-    save(summ, file="summ.RData")
+    # save(summ, file="summ.RData") # uncomment to save file
     summ.BNH4
   }
   
@@ -171,7 +171,7 @@ MC.analysis <- function(x, delta, qUpper, p1.det, sim.det,
     data.CNH4 <- t(as.data.frame(sim1[,"mcCNH4sv"]))
     summ.CNH4 <- MC.summary(p1, data.CNH4)
     summ <- append(summ, list(summ.CNH4=summ.CNH4))
-    save(summ, file="summ.RData")
+    # save(summ, file="summ.RData") # uncomment to save file
     summ.CNH4
   }
   
@@ -261,7 +261,7 @@ MC.analysis <- function(x, delta, qUpper, p1.det, sim.det,
   rownames(variance) <- NULL
   
   ## saving variance matrix
-  save(variance, file="variance.RData")
+  # save(variance, file="variance.RData") # uncomment to save file
   
   ## ending
   print("End MC analysis. Please check your output folder.")

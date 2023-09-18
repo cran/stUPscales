@@ -573,8 +573,8 @@ setMethod("MC.sim", signature = c("list", "numeric"),
             #-------------------------------------------------------------------------------------------------------
             currentDir <- getwd()
             # setwd(MC_setup$folderOutput)
-            save(sim1, file=paste("sim1.RData", sep=""))
-            save(mc, file=paste("mc.RData", sep=""))
+            # save(sim1, file=paste("sim1.RData", sep="")) # uncomment to save file
+            # save(mc, file=paste("mc.RData", sep="")) # uncomment to save file
             setwd(currentDir)
             
             ## closing progress bar

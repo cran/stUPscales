@@ -82,8 +82,11 @@ ts <- ts[[2]]
 gof.new <- GoF(data, 4, 3, "")
 gof.new
 
-PlotEval(data, ts, gof.new, "ExamplePlot", "topright", "topright", "topright")
-}
+## not run
+## creating the plot (uncomment to run)
+#PlotEval(data, ts, gof.new, "ExamplePlot", "topright", "topright", "topright")
+#}
+
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{PlotEval}% use one of  RShowDoc("KEYWORDS")

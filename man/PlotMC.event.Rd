@@ -110,13 +110,14 @@ new_summary1 <- MC.summary(p1 = P1, data = new_data1)
 new_summary_agg1 <- MC.summary.agg(summ = new_summary1, det, delta, 
                                    func.agg = mean, func.agg.p = sum)
 
-# creating the plot for the event 
-PlotMC.event(summ = new_summary_agg, summ1 = new_summary_agg1, obs = 0, 
-             det.var = "det1", det.var1 = "det2", namePlot = "ExamplePlot", 
-             ylab = "Variable 1 [units]", ylab1 = "Variable 2 [units]", 
-             ntick=10, qUpper= "q95")
+## not run
+## creating the plot for the event (uncomment to run)
+#PlotMC.event(summ = new_summary_agg, summ1 = new_summary_agg1, obs = 0, 
+#             det.var = "det1", det.var1 = "det2", namePlot = "ExamplePlot", 
+#             ylab = "Variable 1 [units]", ylab1 = "Variable 2 [units]", 
+#             ntick=10, qUpper= "q95")
+#}
 
-}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{PlotMC.event}% use one of  RShowDoc("KEYWORDS")

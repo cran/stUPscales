@@ -10,11 +10,12 @@ GoF <- function(eval, col_sim, col_obs, name){
   
   colnames(gof1) <- c("")
   
-  # if(name!=""){
-  if(!missing(name)){
-    write.table(gof1, file = paste("gof",name,".csv", sep=""), 
-                sep = ",", qmethod = "double", row.names=TRUE, col.names=FALSE)
-    save(gof1, file=paste("gof",name,".RData", sep=""))  
-  }
+  ## uncomment to create .csv and .RData files
+  # if(!missing(name)){
+  #   write.table(gof1, file = paste("gof",name,".csv", sep=""), 
+  #               sep = ",", qmethod = "double", row.names=TRUE, col.names=FALSE)
+  #   save(gof1, file=paste("gof",name,".RData", sep=""))  
+  # }
+  
   return(gof1)
 }

@@ -109,7 +109,7 @@ setMethod("MC.setup", signature = "setup",
             id.c6   <- 0
             
             for (i in 1:length(rng)){
-              if(i == indexVAR[2] | class(rng[[i]][1])=="list"){next}
+              if(i == indexVAR[2] | is(rng[[i]][1], "list")){next}
               
               if(length(rng[[i]]) > 1 & rng[[i]][1] == "uni") {case <- 1}
               

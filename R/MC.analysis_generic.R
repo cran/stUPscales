@@ -47,7 +47,7 @@ MC.analysis_generic <- function(x, delta, qUpper, data.det, sim.det,
     data.1 <- t(as.data.frame(sim1[[1]][,2:ncol(sim1[[1]])]))
     summ.1 <- MC.summary(p1, data.1)
     summ <- list(summ.1 = summ.1)
-    save(summ, file="summ.RData")
+    # save(summ, file="summ.RData") # uncomment to save file
     summ.1
   },{
     summ.1 <- summ[["summ.1"]]
@@ -56,15 +56,20 @@ MC.analysis_generic <- function(x, delta, qUpper, data.det, sim.det,
   summ.1.agg <- MC.summary.agg(summ.1, det, delta, mean, sum)
   
   namePlot.1 <- "Output1_MC-uncertainty"; ylab="Output 1 [units]"
-  PlotMC.season(summ.1.agg, paste(namePlot.1, "_", round(delta, 0), "min", sep=""), ylab, qUpper)
+  
+  ## not run
+  ## creating the plot (uncomment to run)
+  # PlotMC.season(summ.1.agg, paste(namePlot.1, "_", round(delta, 0), "min", sep=""), ylab, qUpper)
   
   output1.event <- summ.1[((as.POSIXct(summ.1$time) >= event.ini) & (as.POSIXct(summ.1$time) <= event.end)),]
   output1.event.agg <- MC.summary.agg(output1.event, det.event, delta, mean, sum)
   
-  PlotMC.event(summ = output1.event.agg, summ1 = output1.event.agg, obs = 0, det.var = "output.det", det.var1 = "output.det", 
-               namePlot = paste(namePlot.1, "_", round(delta, 0), "min", sep=""), 
-               ylab = ylab, ylab1 = ylab, ntick = ntick, qUpper = qUpper)
-  
+  ## not run
+  ## creating the plot (uncomment to run)
+  # PlotMC.event(summ = output1.event.agg, summ1 = output1.event.agg, obs = 0, det.var = "output.det", det.var1 = "output.det", 
+  #              namePlot = paste(namePlot.1, "_", round(delta, 0), "min", sep=""), 
+  #              ylab = ylab, ylab1 = ylab, ntick = ntick, qUpper = qUpper)
+   
   rm(data.1)
   
   ##============================================================================================================================
@@ -135,7 +140,7 @@ MC.analysis_generic <- function(x, delta, qUpper, data.det, sim.det,
   rownames(variance) <- NULL
   
   ## saving variance matrix
-  save(variance, file="variance.RData")
+  # save(variance, file="variance.RData") # uncomment to save file
   
   ## ending
   print("End MC analysis. Please check your output folder.")

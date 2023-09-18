@@ -88,7 +88,7 @@ plot(P1[,2], typ="l")
 library(stUPscales)
 
 setting_EmiStatR <-  setup(id       = "MC_sim1",
-                           nsim     = 3, # # use a larger number to have 
+                           nsim     = 4, # # use a larger number to have 
                                            # a proper confidence band of simulatios
                            seed     = 123, 
                            mcCores  = 1, 
@@ -137,7 +137,7 @@ setting_EmiStatR <-  setup(id       = "MC_sim1",
 
 MC_setup <- MC.setup(setting_EmiStatR)
 
-sims <- MC.sim(x = MC_setup, EmiStatR.cores = 0)
+sims <- MC.sim(x = MC_setup, EmiStatR.cores = 1)
 
 
 ## Monte Carlo simulation analysis: MC.analysis
@@ -159,23 +159,24 @@ library(EmiStatR)
 
 input.det <- input(spatial = 0, zero = 1e-5, 
                     folder = system.file("shiny", package = "EmiStatR"),
-                    cores = 0,
+                    cores = 1,
                     ww = list(qs = 150, CODs = 104, NH4s = 4.7),
                     inf = list(qf= 0.04, CODf = 0, NH4f = 0),
                     rw = list(CODr = 71, NH4r = 1, stat = "Dahl"),
                     P1 = P1, st = list(E1=E1), export = 0)
 
-# Invoking `EmiStatR` with the deterministic input: 
-sim.det   <- EmiStatR(input.det)
+## uncomment to run:
+## Invoking `EmiStatR` with the deterministic input: 
+# sim.det   <- EmiStatR(input.det)
 
-# further arguments
-delta <- 10 # minutes 
-qUpper <- "q999" 
+## further arguments
+# delta <- 10 # minutes 
+# qUpper <- "q999" 
 
-event.ini <- as.POSIXct("2016-01-02 03:20:00")
-event.end <- as.POSIXct("2016-01-02 12:30:00")
+# event.ini <- as.POSIXct("2016-01-02 03:20:00")
+# event.end <- as.POSIXct("2016-01-02 12:30:00")
 
-# uncomment to run:
+
 # new_analysis <- MC.analysis(x = sims, delta = delta, qUpper = qUpper,  p1.det = P1, 
 #                             sim.det = sim.det, event.ini = event.ini, event.end = event.end, 
 #                             ntick = 5, summ.data = NULL)

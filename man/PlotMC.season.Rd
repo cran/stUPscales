@@ -71,10 +71,12 @@ dim(new_summary)
 
 new_summary$month <- strftime(new_summary[,"time"], format = "\%Y-\%m")
 
-PlotMC.season(summ1 = new_summary, namePlot = "ExamplePlot", 
-              ylab = "Variable 1 [units]", qUpper = "q95")
+## not run
+## creating the plot (uncomment to run)
+# PlotMC.season(summ1 = new_summary, namePlot = "ExamplePlot", 
+#              ylab = "Variable 1 [units]", qUpper = "q95")
+#}
 
-}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{PlotMC.season}% use one of  RShowDoc("KEYWORDS")

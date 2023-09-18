@@ -24,7 +24,7 @@ An 'xts' object on 2010-01-01/2011-12-31 23:50:00 containing:\cr
 %%  ~~ If necessary, more details than the __description__ above ~~
 %}
 \source{
-\url{http://agrimeteo.lu/}
+\url{https://www.agrimeteo.lu/}
 }
 %\references{
 %%  ~~ possibly secondary sources and usages ~~
@@ -37,6 +37,7 @@ library(xts)
 head(Lux_precipitation_2010_2011)
 tail(Lux_precipitation_2010_2011)
 
-plot(Lux_precipitation_2010_2011)
+## uncomment to run (plot)
+# plot(Lux_precipitation_2010_2011)
 }
 \keyword{datasets}
